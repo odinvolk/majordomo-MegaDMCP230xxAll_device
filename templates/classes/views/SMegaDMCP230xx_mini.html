@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    function showChart%.object_title%(chart_type) {
+        var url='';
+        if (chart_type=='month') {
+            //url='<#ROOTHTML#>module/charts.html?id=config&period=365d&chart_type=column&group=month&property=%.object_title%'+'.valueMonth&height=500';
+            url=('<#ROOTHTML#>pChart/?p=%.object_title%'+'.valueMonth&op=log&minimal=1&chart_type=column&subop=365d&group=month');
+        }
+        if (chart_type=='day') {
+            //url='<#ROOTHTML#>module/charts.html?id=config&period=31d&chart_type=column&group=day&property=%.object_title%'+'.valueDay&height=500';
+            url=('<#ROOTHTML#>pChart/?p=%.object_title%'+'.valueDay&op=log&minimal=1&chart_type=column&subop=31d&group=day');
+        }
+        if (chart_type=='hour') {
+            //url='<#ROOTHTML#>module/charts.html?id=config&period=24h&chart_type=column&group=hour&property=%.object_title%'+'.valueHour&height=500';
+            url=('<#ROOTHTML#>pChart/?p=%.object_title%'+'.valueHour&op=log&minimal=1&chart_type=column&subop=24h&group=hour');
+        }
+        //parent.$.fancybox.open({ src: '<div style="width:1000px;"><iframe src="'+url+'" width="100%" height="500"></div>', type: 'html' });
+        parent.$.fancybox.open({ src: url, type: 'iframe',iframe:{preload:false}});
+        //$('#%.object_title%_iframe').attr('src',url);
+        return false;
+    }
+</script>
+<div class="device-widget %.alive|"offline;online"%">
+    <div class="device-header">%.value% %.object_description%</div><div class="device-details" onclick="return showChart%.object_title%('hour');">%.stored_value%</div>
+<svg id="%.object_title%%.object_id%%.linkedRoom%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 4" version="1.1">
+ <rect rx="1" ry="1" height="100%" width="100%" y="0" x="0" fill="#14303b" fill-opacity=".8" stroke="#ab773b" stroke-opacity=".1"/>
+ <circle id="icon%.object_id%_lightp0" cx="2" cy="50%" r="1" fill='%.p0|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp1" cx="4" cy="50%" r="1" fill='%.p1|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp2" cx="6" cy="50%" r="1" fill='%.p2|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp3" cx="8" cy="50%" r="1" fill='%.p3|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp4" cx="10" cy="50%" r="1" fill='%.p4|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp5" cx="12" cy="50%" r="1" fill='%.p5|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp6" cx="14" cy="50%" r="1" fill='%.p6|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp7" cx="16" cy="50%" r="1" fill='%.p7|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp8" cx="18" cy="50%" r="1" fill='%.p8|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp9" cx="20" cy="50%" r="1" fill='%.p9|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp10" cx="22" cy="50%" r="1" fill='%.p10|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp11" cx="24" cy="50%" r="1" fill='%.p11|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp12" cx="26" cy="50%" r="1" fill='%.p12|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp13" cx="28" cy="50%" r="1" fill='%.p13|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp14" cx="30" cy="50%" r="1" fill='%.p14|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp15" cx="32" cy="50%" r="1" fill='%.p15|"grey;#da7823;"%' fill-opacity="1" stroke="#da7823" stroke-width=".1"/>
+ <circle id="icon%.object_id%_lightp16" cx="34" cy="50%" r="1" fill='%.p16|"grey;#da7823;"%' opacity=".1" stroke="#da7823" stroke-width=".1"/>
+</svg>
+</div>
