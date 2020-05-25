@@ -1,5 +1,4 @@
 # majordomo-MegaDMCP230xx_device
-Расширитель MegaDMCP230xx
 
 Простое устройство Расширитель MegaDMCP230xx для Majordomo
 
