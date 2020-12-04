@@ -5,7 +5,7 @@ $ot = $this->object_title;
 
 $ncno = $this->getProperty('ncno');
 
-//DebMes("Updated $ot - ".$ncno . " new value: ".$params['NEW_VALUE'],'openclose');
+//DebMes("Updated $ot - ".$ncno . " new value: ".$params['NEW_VALUE'],'megadmcp230xx');
 
 $this->setProperty('updated', time());
 $this->callMethodSafe('setUpdatedText');
@@ -14,7 +14,7 @@ $this->callMethod('keepAlive');
 
 $is_blocked=(int)$this->getProperty('blocked');
 if ($is_blocked) {
-    //DebMes("Blocked $ot",'openclose');
+    //DebMes("Blocked $ot",'megadmcp230xx');
     return;
 }
 
