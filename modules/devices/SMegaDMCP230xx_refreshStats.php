@@ -1,4 +1,7 @@
 <?php
+$ipAddress = $this->getProperty('ipAddress');
+$Password = $this->getProperty('Password');
+$Port = $this->getProperty('PortSDA');
 
 $ot=$this->object_title;
 
@@ -68,5 +71,5 @@ foreach($months as $k=>$v) {
         SQLInsert($table_name,$new_rec);
     }
 }
-file_get_contents("http://192.168.10.101/sec/?pt=35&cnt=0");
-//192.168.0.14/sec/?pt=0&cnt=0
+file_get_contents("http://".$ipAddress."/".$Password."/?pt=".$Port."&cnt=0"); //192.168.0.14/sec/?pt=0&cnt=0
+
