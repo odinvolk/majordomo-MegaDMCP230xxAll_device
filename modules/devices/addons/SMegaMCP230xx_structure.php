@@ -1,9 +1,9 @@
 <?php
  
-$this->device_types['megadmcp230xx'] = array(
-        'TITLE'=>'Расширитель MegaDMCP230xx',
+$this->device_types['megadmcp230xxAll'] = array(
+        'TITLE'=>'Расширитель MegaDMCP230xxAll',
         'PARENT_CLASS'=>'SDevices',
-        'CLASS'=>'SMegaDMCP230xx',
+        'CLASS'=>'SMegaDMCP230xxAll',
         'METHODS'=>array(
             'statusUpdated'=>array('DESCRIPTION'=>'Data Value updated event'),
             'valueWorkUpdated'=>array('DESCRIPTION'=>'Work Value updated event'),
