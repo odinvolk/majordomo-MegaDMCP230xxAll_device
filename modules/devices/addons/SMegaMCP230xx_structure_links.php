@@ -1,5 +1,5 @@
 <?php
-$this->device_links['SMegaDMCP230xx']=array(
+$this->device_links['SMegaDMCP230xxAll']=array(
     array (
         'LINK_NAME'=>'sensor_pass_port0',
         'LINK_TITLE'=>LANG_DEVICES_LINK_SENSOR_PASS,
